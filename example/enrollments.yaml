@@ -1,23 +1,28 @@
 data_source:
-  name: fct_enrollments
+  name: transform_test
   description: Wayfair enrollments table
   owners:
     - yash.shah@fpsinc.com
-  sql_table: dbt_etl.fct_enrollments
+  sql_table: dbt_etl.transform_test
   
-
   identifiers:
-    - name: enrollment_date
+    - name: Enrollment
       type: primary
-      expr: enrollment_date
+      expr: id_enrollment
 
-      
   measures:
-    - name: ib_calls
-      description: Total ib_calls.
-      agg: sum
+    - name: new_enrollments
+      expr: "1"
+      agg: SUM
+
   dimensions:
-    - name: sites
+    - name: ds
+      type: time
+      type_params:
+        is_primary: True
+        time_granularity: day
+    - name: country
+      description: The country where the customer is located.
       type: categorical
 
   mutability:

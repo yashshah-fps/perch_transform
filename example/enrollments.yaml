@@ -6,7 +6,7 @@ data_source:
   sql_table: dbt_etl.transform_test
   
   identifiers:
-    - name: Enrollment
+    - name: enrollment
       type: primary
       expr: id_enrollment
 

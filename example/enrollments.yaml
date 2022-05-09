@@ -5,11 +5,11 @@ data_source:
     - yash.shah@fpsinc.com
   sql_table: dbt_etl.fct_enrollments
   
-  
-identifiers:
-  - name: date
-    type: foreign
-    expr: enrollment_date
+
+  identifiers:
+    - name: date
+      type: primary
+      expr: enrollment_date
 
       
   measures:

@@ -1,0 +1,24 @@
+data_source:
+  name: fct_enrollments
+  description: Wayfair enrollments table
+  owners:
+    - yash.shah@fpsinc.com
+  sql_table: dbt_etl.fct_enrollments
+
+
+
+  identifiers:
+    - name: date
+      type: primary
+      expr: enrollment_date
+      
+  measures:
+    - name: ib_calls
+      description: Total ib_calls.
+      agg: sum
+  dimensions:
+    - name: sites
+      type: categorical
+
+  mutability:
+    type: immutable

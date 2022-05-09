@@ -66,12 +66,12 @@ metric:
 ---
 # Metric with a constraint (Think of this like a 'where' clause)
 metric:
-  name: ib_calls
+  name: new_enrollments
   description: | 
-    Total IB Calls
+    Total Enrollments
   owners:
     - yash.shah@fpsinc.com
-  display_name: Total IB Calls
+  display_name: Total Enrollments
   type: measure_proxy 
   type_params:
-    measure: ib_calls
+    measure: new_enrollments

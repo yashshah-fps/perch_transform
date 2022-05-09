@@ -7,6 +7,9 @@ data_source:
   
 
   identifiers:
+    - name: enrollment_date
+      type: primary
+      expr: enrollment_date
 
       
   measures:

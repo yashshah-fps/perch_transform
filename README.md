@@ -56,3 +56,5 @@ mql query --metrics revenue_usd --dimensions ds --dimensions customer__country -
 Run a ratio metric:
 ```
 mql query --metrics cancellation_rate --dimensions ds --order -ds
+
+That's it!

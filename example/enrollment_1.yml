@@ -17,8 +17,8 @@ data_source:
     SELECT
       enrollment_date
       , sites
-      , sum(ib_calls)
-      , sum(calls)
+      , sum(ib_calls) as ib_calls
+      , sum(calls) as total_calls
     FROM wayfair_enrollment_hourly
     where enrollment_date > '2022-04-10'
     group by 1,2

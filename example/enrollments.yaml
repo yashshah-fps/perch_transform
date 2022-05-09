@@ -4,6 +4,12 @@ data_source:
   owners:
     - yash.shah@fpsinc.com
   sql_table: dbt_etl.fct_enrollments
+  
+  
+identifiers:
+  - name: date
+    type: foreign
+    expr: enrollment_date
 
       
   measures:

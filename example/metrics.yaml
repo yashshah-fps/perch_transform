@@ -62,3 +62,16 @@ metric:
     measure: cancellations_usd
   constraint: |
     customer__country = 'MX'
+    
+---
+# Metric with a constraint (Think of this like a 'where' clause)
+metric:
+  name: ib_calls
+  description: | 
+    Total IB Calls
+  owners:
+    - yash.shah@fpsinc.com
+  display_name: Total IB Calls
+  type: measure_proxy 
+  type_params:
+    measure: ib_calls
